@@ -1,0 +1,303 @@
+fernando@fernando-AM1M-S2H ~ $ R
+
+R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R es un software libre y viene sin GARANTIA ALGUNA.
+Usted puede redistribuirlo bajo ciertas circunstancias.
+Escriba 'license()' o 'licence()' para detalles de distribucion.
+
+R es un proyecto colaborativo con muchos contribuyentes.
+Escriba 'contributors()' para obtener más información y
+'citation()' para saber cómo citar R o paquetes de R en publicaciones.
+
+Escriba 'demo()' para demostraciones, 'help()' para el sistema on-line de ayuda,
+o 'help.start()' para abrir el sistema de ayuda HTML con su navegador.
+Escriba 'q()' para salir de R.
+
+[Previously saved workspace restored]
+
+> source("TP.R")
+Error en file(filename, "r", encoding = encoding) : 
+  no se puede abrir la conexión
+Además: Mensajes de aviso perdidos
+In file(filename, "r", encoding = encoding) :
+  no fue posible abrir el archivo 'TP.R': No existe el archivo o el directorio
+> x=runif(100)
+> y=runif(100)
+> plot(x,y)
+> hist(x,y)
+Error en hist.default(x, y) : 
+  some 'x' not counted; maybe 'breaks' do not span range of 'x'
+> help(dist)
+> x=rnorm(1000)
+> y=rnorm(1000)
+> qqplot(x,y,main="x e y con la misma distribucion normal")
+> x=rt(1000)
+Error en rt(1000) : el argumento "df" está ausente, sin valor por omisión
+> #dandole valores a las distribuciones una distribucion normal, sin ningun valor agregado es una distribucion normal estandar, rnorm(1000, mean=3, sd=2) significa que se trata de una distribucion normal con valores N(3,2)
+> a=rnorm(1000, mean=3, sd=2)
+> plot(y)
+> plot(X)
+Error en plot(X) : objeto 'X' no encontrado
+> plot(x)
+> qqplot(x,a,main="x~N(0,1), a~N(3,2)")
+> b=rt(1000)
+Error en rt(1000) : el argumento "df" está ausente, sin valor por omisión
+> b=rt(1000, df=0)
+Mensajes de aviso perdidos
+In rt(1000, df = 0) : NAs produced
+> plot(b)
+Error en plot.window(...) : need finite 'ylim' values
+Además: Mensajes de aviso perdidos
+1: In min(x) : ningún argumento finito para min; retornando Inf
+2: In max(x) : ningun argumento finito para max; retornando -Inf
+> b
+   [1] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+  [19] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+  [37] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+  [55] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+  [73] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+  [91] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [109] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [127] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [145] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [163] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [181] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [199] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [217] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [235] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [253] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [271] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [289] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [307] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [325] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [343] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [361] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [379] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [397] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [415] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [433] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [451] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [469] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [487] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [505] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [523] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [541] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [559] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [577] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [595] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [613] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [631] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [649] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [667] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [685] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [703] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [721] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [739] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [757] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [775] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [793] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [811] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [829] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [847] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [865] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [883] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [901] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [919] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [937] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [955] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [973] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+ [991] NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN
+> b=rt(1000, df=2)
+> qqplot(x,b,main="x~N(0,1), a~t(2)")
+> c=exp(rnorm(x))
+> qqplot(x,c,main=" x~N(0,1), c~exp(N(0,1))")
+> x=numeric(20)
+> x
+ [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+> Fibonacci_12=numeric(12)
+> Fibonacci_12[1]=Fibonacci_12[2]=1
+> for(i in 3:12){Fibonacci_12[i]=Fibonacci_12[i-2]+Fibonacci_12[i-1]}
+> Fibonacci_12
+ [1]   1   1   2   3   5   8  13  21  34  55  89 144
+> #quiero representar la sucesion de Fibonacci, esta sucesion esta definida por la ecuacion fn=fn-1+fn-2, además tiene 3 valores fijos, f0=0, f1=1 y f2=1. Lo primero que hacemos es fijar el largo de la sucesion, como se puede ver arriba, si save
+> save
+function (..., list = character(), file = stop("'file' must be specified"), 
+    ascii = FALSE, version = NULL, envir = parent.frame(), compress = !ascii, 
+    compression_level, eval.promises = TRUE, precheck = TRUE) 
+{
+    opts <- getOption("save.defaults")
+    if (missing(compress) && !is.null(opts$compress)) 
+        compress <- opts$compress
+    if (missing(ascii) && !is.null(opts$ascii)) 
+        ascii <- opts$ascii
+    if (missing(version)) 
+        version <- opts$version
+    if (!is.null(version) && version < 2) 
+        warning("Use of save versions prior to 2 is deprecated", 
+            domain = NA)
+    if (missing(list) && !length(list(...))) 
+        warning("nothing specified to be save()d")
+    names <- as.character(substitute(list(...)))[-1L]
+    list <- c(list, names)
+    if (!is.null(version) && version == 1) 
+        .Internal(save(list, file, ascii, version, envir, eval.promises))
+    else {
+        if (precheck) {
+            ok <- unlist(lapply(list, exists, envir = envir))
+            if (!all(ok)) {
+                n <- sum(!ok)
+                stop(sprintf(ngettext(n, "object %s not found", 
+                  "objects %s not found"), paste(sQuote(list[!ok]), 
+                  collapse = ", ")), domain = NA)
+            }
+        }
+        if (is.character(file)) {
+            if (!nzchar(file)) 
+                stop("'file' must be non-empty string")
+            if (!is.character(compress)) {
+                if (!is.logical(compress)) 
+                  stop("'compress' must be logical or character")
+                compress <- if (compress) 
+                  "gzip"
+                else "no compression"
+            }
+            con <- switch(compress, bzip2 = {
+                if (!missing(compression_level)) bzfile(file, 
+                  "wb", compression = compression_level) else bzfile(file, 
+                  "wb")
+            }, xz = {
+                if (!missing(compression_level)) xzfile(file, 
+                  "wb", compression = compression_level) else xzfile(file, 
+                  "wb", compression = 9)
+            }, gzip = {
+                if (!missing(compression_level)) gzfile(file, 
+                  "wb", compression = compression_level) else gzfile(file, 
+                  "wb")
+            }, `no compression` = file(file, "wb"), stop(gettextf("'compress = \"%s\"' is invalid", 
+                compress)))
+            on.exit(close(con))
+        }
+        else if (inherits(file, "connection")) 
+            con <- file
+        else stop("bad file argument")
+        if (isOpen(con) && summary(con)$text != "binary") 
+            stop("can only save to a binary connection")
+        .Internal(saveToConn(list, con, ascii, version, envir, 
+            eval.promises))
+    }
+}
+<bytecode: 0xa345b0>
+<environment: namespace:base>
+> help(save)
+> save("R prueba")
+Error en save("R prueba") : object ‘R prueba’ not found
+> save("R prueba")
+Error en save("R prueba") : object ‘R prueba’ not found
+> 
+> 
+> x=numeric(20)
+> x
+ [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+> Fibonacci_12=numeric(12)
+> Fibonacci_12[1]=Fibonacci_12[2]=1
+> for(i in 3:12){Fibonacci_12[i]=Fibonacci_12[i-2]+Fibonacci_12[i-1]}
+> Fibonacci_12
+ [1]   1   1   2   3   5   8  13  21  34  55  89 144
+> #quiero representar la sucesion de Fibonacci, esta sucesion esta definida por la ecuacion fn=fn-1+fn-2, además tiene 3 valores fijos, f0=0, f1=1 y f2=1. Lo primero que hacemos es fijar el largo de la sucesion, como se puede ver arriba, luego, voy a fijar los valores 1 y 2 que son iguales a 1
+> sucesion=numeric(12)
+> sucesion[1]=sucesion[2]=1
+> sucesion
+ [1] 1 1 0 0 0 0 0 0 0 0 0 0
+#se puede ver como a la sucesion se le fijaron los dos primeros valores iguales a 1
+#luego se define la ecuacion de la sucesion que vendria a ser fn=fn-1+fn-2 lo que vendria a ser que el valor de i es la suma de los valores de la sucesion
+en i-1 e i-2(falta aclarar que diciendo for (i in 3:12) estariamos definiendo los valores de i sobre los que se efectua esta ecuacion, utilizando el [] para definir uno por uno cuales son estos. Recordando que [] utiliza el valor que se encuentra en la posicion definida dentro de los corchetes
+o sea:
+> for(i in 3:12){sucesion[i]=sucesion[i-1]+sucesion[i-2]}
+> sucesion
+ [1]   1   1   2   3   5   8  13  21  34  55  89 144
+
+Generar 50 números pseudoaleatorios a partir del generador congruencial multiplicativo
+Xn = 171Xn-1(mod30269)
+Un = Xn/30269
+
+con semilla 27218
+
+> random.number=numeric(50)
+> random.seed=27218
+> for(j in 1:50)
++ {random.seed=(171*random.seed)%%30269
++ random.number[j]=random.seed/30269
++ }
+primero, armo una sucesion (random.number) que va a tener 50 elementos, luego defino el valor (random.seed=27218) que voy a usar dentro de la ecuacion, en la linea siguiente defino la variable de la sucesion(j) que va a estar entre 1 y 50, y empiezo a armar la ecuacion (recordar que %%(modulo) calcula el resto de la division de las valores entre los cuales se aplica). semilla=27218=(171*27128)%%30269+j=27218/30269
+
+otra forma de hacerlo
+> x=numeric(50)
+> semilla=27218
+> x[1]=(171*semilla)%%30269
+> for(i in 2:50){x[i]=(171*x[i-1])%%30269}
+> NumerosAleatorios=x/30269
+> NumerosAleatorios
+
+esta me resulta un poco mas facil de ver, representa un poco mas textualmente la ecuacion:
+Xn=171Xn-1(mod 30269)
+Un=Xn/30269
+definiendo, el valor de la semilla y la sucesion(con su largo) anteriormente
+(la semilla es el primer valor i-1 de la sucesion)
+
+otro metodo mas es el generador congruencial lineal, que vamos a ver a continuacion.
+
+Generar 50 números pseudoaleatorios a partir del generador congruencial
+Xn=69069Xn-1(mod(2^37))
+Un=Xn/(2^37)
+
+comparemos, gc con gcm
+gc: 
+Xn=69069Xn-1(mod(2^37))
+Un=Xn/(2^37)
+gcm:
+Xn = 171Xn-1(mod30269)
+Un = Xn/30269
+Investigar!!!!!(si es que lo vuelvo a ver)
+
+> random.number=numeric(50)
+> random.seed=1
+> for(j in 1:50)
++ {random.seed=(69069*random.seed)%%(2^(37))
++ random.number[j]=random.seed/(2^(37))
++ }
+
+muy parecido al generador congruencial
+
+runif() tambien me da una sucesion de numeros pseudoaleatorios
+dunif() funcion densidad punif() funcion distribucion
+qunif() funcion de cuantiles runif() genera valores aleatorios
+
+lower.tail: es un valor lógico; si es TRUE (por defecto), las probabilidades son
+P[X ≤x], en otro caso P[X > x].
+
+la funcion set.seed(algun numero) es importante para conservar la distribucion
+y poder repetir ese resultado cada vez que se busque una distribucion 
+es necesario usarlo cada vez que se quiera repetir el mismo resultado
+
+
+sample(x, size, replace=FALSE, prob=NULL)
+sample() permite tomar una muestra aleatoria simple a partir de un vector de
+valores con o sin reemplazamiento.
+
+Simula la distribución de la suma de los números que salen al lanzar cuatro dados
+Para ello usaremos la función sapply de la siguiente forma
+t<-sapply(1:10000, function(x){sum(sample(1:6,4,rep=T))})
+la cual aplica a un vector de tamaño 10000 una función sin nombre generando a su vez
+un vector de tamaño 10000. La función considerada obtiene muestras de tamaño y, a
+continuación, suma los elementos de la muestra.
+Se podría haber hecho con un for pero este procedimiento es más rápido.
+
+Si queremos simular 8 extracciones con reemplazamiento
+> sample(c(1,0), 8, rep=T, prob=c(0.3,0.7))
+[1] 1 0 0 0 0 0 1 0
+
+definiendo probabilidades en la funcion sample()
+
